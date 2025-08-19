@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CrystalClean Solutions</title>
+  <style>
+    body {
+      margin:0;
+      font-family: Arial, sans-serif;
+      background:#111;
+      color:#eee;
+      display:flex;
+      flex-direction:column;
+      min-height:100vh;
+    }
+    header {
+      background:#006633;
+      padding:1rem;
+      position:fixed;
+      top:0; left:0;
+      width:100%;
+      z-index:1000;
+      text-align:center;
+    }
+    header h1 {
+      font-family: "Wide Latin", serif;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #fff;
+      margin: 0.5rem 0;
+      letter-spacing: 3px;
+    }
+    header p.tagline {
+      font-size: 1rem;
+      font-style: italic;
+      color: #d4f4dd;
+      margin: 0;
+    }
+    nav ul {
+      list-style:none;
+      display:flex;
+      justify-content:center;
+      margin:0;
+      padding:0;
+      flex-wrap:wrap;
+    }
+    nav li {margin:0 15px;}
+    nav a {
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+      cursor:pointer;
+    }
+    nav a:hover {text-decoration:underline;}
+    
+    main {
+      flex:1;
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+      padding:160px 20px 60px; /* space for header & footer */
+    }
+    section {
+      display:none;
+      max-width:900px;
+      width:100%;
+      animation: fadeIn 0.5s ease;
+    }
+    section.active {display:block;}
+    h2 {color:#00cc66; text-align:center; margin-bottom:20px;}
+    
+    footer {
+      background:#000;
+      color:#aaa;
+      text-align:center;
+      padding:10px;
+      position:fixed;
+      bottom:0; left:0;
+      width:100%;
+      font-size: 0.8rem;
+    }
+    footer span.brand {
+      font-family: "Wide Latin", serif;
+      color: #00aaff;
+      font-size: 0.9rem;
+    }
+    
+    .chat-btn {
+      position:fixed;
+      bottom:80px; right:20px;
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      background:#25d366;
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:28px;
+      text-decoration:none;
+      z-index:2000;
+    }
+
+    @media(max-width:768px){
+      nav ul{flex-direction:column; align-items:center;}
+    }
+
+    @keyframes fadeIn {
+      from {opacity:0; transform:translateY(10px);}
+      to {opacity:1; transform:translateY(0);}
+    }
+
+    /* Testimonial form */
+    .review-box {
+      background:#222;
+      padding:20px;
+      border-radius:10px;
+      margin-top:20px;
+    }
+    .stars span {
+      font-size:24px;
+      cursor:pointer;
+      color:#555;
+    }
+    .stars span.active {
+      color:gold;
+    }
+    textarea {
+      width:100%;
+      padding:10px;
+      margin-top:10px;
+      border-radius:5px;
+      border:none;
+      resize:vertical;
+      min-height:80px;
+    }
+    button {
+      margin-top:10px;
+      padding:10px 20px;
+      border:none;
+      border-radius:5px;
+      background:#00cc66;
+      color:#fff;
+      cursor:pointer;
+      font-weight:bold;
+    }
+    button:hover {background:#00994d;}
+    .submitted-review {
+      margin-top:15px;
+      padding:10px;
+      background:#333;
+      border-radius:5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CRYSTALCLEAN SOLUTIONS</h1>
+    <p class="tagline">“Where Clean Meets Confidence.”</p>
+    <nav>
+      <ul>
+        <li><a data-target="home">Home</a></li>
+        <li><a data-target="about">About Us</a></li>
+        <li><a data-target="services">Services</a></li>
+        <li><a data-target="projects">Projects</a></li>
+        <li><a data-target="team">Team</a></li>
+        <li><a data-target="testimonials">Testimonials</a></li>
+        <li><a data-target="faq">FAQ</a></li>
+        <li><a data-target="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="active">
+      <h2>Welcome to CrystalClean Solutions</h2>
+      <p style="text-align:center">Cleaning & Corporate Excellence Combined.</p>
+      <div style="margin-top:20px;">
+        <p>> At CrystalClean, we don’t just clean—we restore freshness, create healthier spaces, and leave lasting impressions. From spotless homes to polished offices, we bring back the shine that turns ordinary spaces into extraordinary ones. Choose us, and experience cleaning with heart, precision, and trust.</p>
+        <p>> We see our customers as invited guests to a party and we are the hosts. It’s our everyday job to make every important aspect of the customer experience a little bit better.</p>
+        <p>> What’s good for our customers, is also in the long run good for us.</p>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>> CrystalClean Solutions provides professional cleaning and advisory services with integrity and excellence.</p>
+      <p>> <b>Vision:</b> To be the most trusted cleaning and corporate advisory partner.</p>
+      <p>> <b>Mission:</b> Deliver spotless cleaning solutions and accurate financial advisory that empower our clients to thrive.</p>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <p>> Sofa & Mattress Cleaning</p>
+      <p>> Carpet Cleaning</p>
+      <p>> Curtains Cleaning</p>
+      <p>> Fumigation & Pest Control</p>
+      <p>> Move In / Move Out Cleaning</p>
+      <p>> Post Construction Cleaning</p>
+      <p>> Deep House / Window Cleaning</p>
+      <h3>Commercial Cleaning</h3>
+      <p>> Office Cleaning</p>
+      <p>> Airbnb & Restaurants</p>
+      <p>> Retail Outlets</p>
+      <p>> Janitorial Services</p>
+      <h3>Advisory Services</h3>
+      <p>> Tax Advisory</p>
+      <p>> Debt Management</p>
+      <p>> Statutory Deductions & Filing</p>
+      <p>> Accounting System Advisory</p>
+      <p>> Annual Returns</p>
+      <p>> KRA Cases & Forensic Audits</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>> Showcasing our successful cleaning and advisory projects across SMEs, corporates, and NGOs.</p>
+    </section>
+
+    <section id="team">
+      <h2>Our Team</h2>
+      <p>> Founder & Team Lead: James Omondi</p>
+    </section>
+
+    <section id="testimonials">
+      <h2>Testimonials</h2>
+      <div class="review-box">
+        <p><b>Leave a Review:</b></p>
+        <div class="stars" id="starRating">
+          <span data-value="1">★</span>
+          <span data-value="2">★</span>
+          <span data-value="3">★</span>
+          <span data-value="4">★</span>
+          <span data-value="5">★</span>
+        </div>
+        <textarea id="reviewText" placeholder="Write your comment..."></textarea>
+        <button id="submitReview">Submit</button>
+      </div>
+      <div id="reviewsList">
+        <p><b>Customer Reviews:</b></p>
+        <p id="noReviews">No reviews yet.</p>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>FAQ</h2>
+      <p>> <b>Q:</b> Do you bring your own supplies?<br>> <b>A:</b> Yes, we provide all equipment and products.</p>
+      <p>> <b>Q:</b> How do I book?<br>> <b>A:</b> Contact us on WhatsApp or email.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>> Email: <a href="mailto:jamesowilly9@gmail.com">jamesowilly9@gmail.com</a></p>
+      <p>> Phone: +254 795 474796</p>
+      <p>> WhatsApp: <a href="https://wa.me/254707957459">+254 707 957459</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Site built by <span class="brand">WAYNEio.Inc</span></p>
+  </footer>
+
+  <a href="https://wa.me/254707957459" class="chat-btn">💬</a>
+
+  <script>
+    // Tab-like navigation
+    const navLinks = document.querySelectorAll("nav a");
+    const sections = document.querySelectorAll("main section");
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        const targetId = link.getAttribute("data-target");
+        sections.forEach(sec => sec.classList.remove("active"));
+        document.getElementById(targetId).classList.add("active");
+      });
+    });
+
+    // Review & Rating system with localStorage persistence
+    const stars = document.querySelectorAll("#starRating span");
+    const reviewText = document.getElementById("reviewText");
+    const submitBtn = document.getElementById("submitReview");
+    const reviewsList = document.getElementById("reviewsList");
+    const noReviews = document.getElementById("noReviews");
+    let selectedRating = 0;
+
+    // Load saved reviews
+    const savedReviews = JSON.parse(localStorage.getItem("reviews")) || [];
+    if(savedReviews.length > 0){
+      noReviews.style.display = "none";
+      savedReviews.forEach(r => displayReview(r.rating, r.text));
+    }
+
+    stars.forEach(star => {
+      star.addEventListener("click", () => {
+        selectedRating = star.getAttribute("data-value");
+        stars.forEach(s => s.classList.remove("active"));
+        for(let i=0;i<selectedRating;i++){
+          stars[i].classList.add("active");
+        }
+      });
+    });
+
+    submitBtn.addEventListener("click", () => {
+      const text = reviewText.value.trim();
+      if(selectedRating > 0 && text){
+        const newReview = {rating:selectedRating, text:text};
+        savedReviews.push(newReview);
+        localStorage.setItem("reviews", JSON.stringify(savedReviews));
+        displayReview(selectedRating, text);
+        reviewText.value = "";
+        stars.forEach(s => s.classList.remove("active"));
+        selectedRating = 0;
+        noReviews.style.display = "none";
+      } else {
+        alert("Please select a star rating and write a comment.");
+      }
+    });
+
+    function displayReview(rating, text){
+      const newReview = document.createElement("div");
+      newReview.classList.add("submitted-review");
+      newReview.innerHTML = `<p>Rating: ${"★".repeat(rating)}</p><p>${text}</p>`;
+      reviewsList.appendChild(newReview);
+    }
+  </script>
+</body>
+</html>
